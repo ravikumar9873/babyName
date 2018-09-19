@@ -1,0 +1,128 @@
+@CHARSET "ISO-8859-1";
+body{
+    background-size: auto;
+    font-family: Arial;
+}
+  ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    position: relative;
+    z-index: 9;
+}
+/* ul li{
+    float: left;
+    width: 14%;
+    height: 40px;
+    background-color: #804040;    
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;   
+} */
+/*
+ul li a{
+    text-decoration: none;
+    color: white !important;
+    display: block;
+}
+  ul li a:hover{
+    background-color: #ff8000;
+} 
+ul li ul li{
+    display: none;   
+}
+ul li:hover ul li{
+    display: block;
+    width: 100%;
+} 
+ */
+p{
+	font-family: Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 15px!important;
+	text-align: left;
+	margin: 0 0 10px;
+	margin-left: 40px;
+	margin-right: auto;
+	
+}
+strong{
+	font-family: Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-align: left;
+	
+}
+h4{
+	font-family: Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-align: left;
+	margin-left: 40px;
+	margin-right: 40 px;
+}
+h2{
+	font-family: Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-align: left;
+	margin-left: 40px;
+	margin-right: 40 px;
+}
+h1{
+	font-family: Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-align: left;
+	margin-left: 40px;
+	margin-right: 40 px;
+}
+div.box{
+	width: 300px;
+    border: 1px solid pink;
+    padding: 20px;
+    float: left;
+}
+a{
+	color: #337ab7;
+    text-decoration: none;
+}
+div{
+	margin-left: auto;
+	margin-right: auto;
+}
+.float-right {
+    margin-left: 15px;
+}
+.mt50{
+	margin-top:-24px !important;
+}
+.clearfix{
+	display: inline-block;
+    float: right;
+}
+.text-right {
+    text-align: right!important;
+}
+.welcome-dd{
+	width: 180px;
+    display: inline-block;
+}
+.logo-img{
+	display: block;
+    float: left;
+}
+.myNewSettingL {
+        width: 590px;
+        margin-right: auto;
+        margin-bottom: auto;
+}
+.SetnewDivrow label {
+        font-weight: 700;
+        margin-bottom: 0;
+        width: 152px;
+}
+.SetnewDivrow span a, .myNewSettingR span a, .fnfp p, .FnF p {
+        color: #377bb8;
+        font-weight: 400;
+        font-size: 12px;
+}
+.btnCtrl{
+	    width: 46%;
+}
+
+label {
+    margin: 20px;
+}
+
