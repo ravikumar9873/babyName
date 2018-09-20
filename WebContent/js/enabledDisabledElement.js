@@ -328,9 +328,9 @@ function updatePassword(){
 	});
 	
 	function showPasswordStatus(result){
-		if(result=="SUCCESS"){			
-			 $('#pwdMessageDiv').css("display","block");
+		if(result=="SUCCESS"){					 
 			 document.getElementById('pwdMessageDiv').classList.remove('d-none');
+			 $('#pwdMessageDiv').css("display","block");
 			 /*$('#pwdMessageDiv').html("<font color='green' style='font-family:arial;font-size:80%;'>Password changed successfully</font>");*/
 			 $('#txtOldPwd').val("");
 			 $('#txtNewPwd').val("");

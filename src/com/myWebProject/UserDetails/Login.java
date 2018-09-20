@@ -11,6 +11,7 @@ import java.util.List;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,35 +26,36 @@ public class Login extends HttpServlet {
 	 PreparedStatement pst;
 	 boolean login = false;
 	 UserAuthenticationService service;
+	 String name, message;
+	 GetterSetter getter;
 	 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out =response.getWriter();
 		response.setContentType("text/html");
 		
-		String userName = request.getParameter("username");
+		String username = request.getParameter("username");
 		String password = request.getParameter("pwd");
-		email=userName;
+		email=username;
 		
 		
-		String message = service.validateLogin(userName, password);
+		
+		try {
+			message = service.validateLogin(username, password);
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
 		response.getWriter().write(message);
-		HttpSession session  = request.getSession();
-        session.setAttribute("username", userName);
-
-		/*if(message.equals("SUCCESS")) {			
+		if(message.equals("SUCCESS")) {
 			try {
-				service.getUserDetailsFromDB(userName);
+				name = service.getName(username);
 			} catch (SQLException e) {
 				e.printStackTrace();
-			}
-		HttpSession session  = request.getSession();		
-		session.setAttribute("username", GetterSetter.getUserName());		
-		session.setAttribute("name", GetterSetter.getName());
-		session.setAttribute("email", GetterSetter.getEmail());
-		session.setAttribute("phone", GetterSetter.getPhoneNumber());
-		System.out.println(GetterSetter.getUserName()+ " " + GetterSetter.getName()+ " " + GetterSetter.getEmail()+ " " +  GetterSetter.getPhoneNumber());
+			}			
+		HttpSession session  = request.getSession();
+        session.setAttribute("username", getter.getUserName());
+        session.setAttribute("name", name);
 		}
-		response.getWriter().write(message);*/
+	
 }
 	
 	public void init(ServletConfig config)throws ServletException{

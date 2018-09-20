@@ -34,7 +34,6 @@ public class DBConnection {
 		if (null != con) {
 			Statement st = con.createStatement();
 			st.execute(query);
-//			st.executeUpdate();
 		} else {
 			System.out.println("Query execution failed!");
 		}

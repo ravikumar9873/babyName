@@ -19,7 +19,7 @@
 		  <div class="text-right"> 
 		  <a class="navbar-brand logo-img" href="/MyWebProject/Index.jsp">Logo</a> 
 			 <div class="dropdown welcome-dd">
-			<a href="#"	class="nav-link dropdown-toggle text-right" data-toggle="dropdown">${username}</a> 
+			<a href="#"	class="nav-link dropdown-toggle text-right" data-toggle="dropdown">${name}</a> 
 			<ul class="dropdown-menu dropdown-menu-right">
 			 <li class="dropdown text-right">
 					<li><a class="dropdown-item" href="/MyWebProject/UserInformation/Settings.jsp">Settings</a></li>

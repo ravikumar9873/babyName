@@ -14,6 +14,7 @@ public class UserAuthenticationService {
 	String name,email,phone,password;
 	HashMap<String, String> hashmap;;
 	GetterSetter getterSetter;
+	Connection con;
 	public String  validateEmail(String email) throws SQLException {
 		Connection con = null;
         String message = null;
@@ -58,7 +59,7 @@ public class UserAuthenticationService {
         return message;
 	}
 	
-	public String validateLogin(String username, String pwd) {
+	public String validateLogin(String username, String pwd) throws SQLException {
 		Connection con = null;
         String message = null;
         String query;
@@ -74,6 +75,8 @@ public class UserAuthenticationService {
         }catch(Exception e) {
         	message = "FAILURE";
             e.printStackTrace();
+        }finally {
+        	DBConnection.closeDBConnection(con);
         }
         return message;
 	}
@@ -111,5 +114,19 @@ public class UserAuthenticationService {
         return hashmap;
 	}	
 	
+	public String getName(String username) throws SQLException {
+		con = DBConnection.connectDB();
+		String query = "SELECT TOP 1 * FROM USERDETAILS WHERE (EMAIL="+"'"+username+"'"+ " OR  USERNAME="+"'"+username+"'"+" )";
+		ResultSet rs = DBConnection.getDBResultSet(con, query);
+		while(rs.next()) {
+			getterSetter = new GetterSetter();
+    		getterSetter.setName(rs.getString(1)); 
+    		getterSetter.setEmail(rs.getString(2));
+    		getterSetter.setPhoneNumber(rs.getString(3));
+    		getterSetter.setPass(rs.getString(4));
+    		getterSetter.setUserName(rs.getString(5));
+		}
+		return GetterSetter.getName();
+	}
 
 }
