@@ -6,4 +6,5 @@ function cancelForm(){
 		  $('#mobileErrorMsg').html("");
 		  $('#pwdErrorMsg').html("");
 		  $('#cpwdErrorMsg').html("");
+		  $('#pwdMessageDiv').css("display","none");
 }

@@ -328,17 +328,20 @@ function updatePassword(){
 	});
 	
 	function showPasswordStatus(result){
-		if(result=="SUCCESS"){					 
-			 document.getElementById('pwdMessageDiv').classList.remove('d-none');
+		if(result=="SUCCESS"){	
+			 $('#pwdMessageDiv').css("display","none");
+			 $('pwdMessageDiv').removeClass();
+			 /*document.getElementById('pwdMessageDiv').classList.removeClass();*/
 			 $('#pwdMessageDiv').css("display","block");
-			 /*$('#pwdMessageDiv').html("<font color='green' style='font-family:arial;font-size:80%;'>Password changed successfully</font>");*/
+			 $('#pwdMessageDiv').html("<font color='green' style='font-family:arial;font-size:80%;'>Password changed successfully</font>");
 			 $('#txtOldPwd').val("");
 			 $('#txtNewPwd').val("");
 			 $('#txtNewCPwd').val("");
 		}else{
 			$('#pwdMessageDiv').css("display","block");
 			 $('#pwdMessageDiv').html("<font color='red' style='font-family:arial;font-size:80%;'>Current Password doesn't match with our record.</font>");
-		}
+		}	
+	
 		window.setTimeout(function() {
 	        $(".alert").fadeTo(5000, 0).slideUp(5000, function(){
 	            $(this).remove(); 

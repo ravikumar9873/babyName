@@ -12,12 +12,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+<a class="navbar-brand logo-img" href="/MyWebProject/Index.jsp" ><img src="<%=request.getContextPath() %>/images/Logo.png"></a>
 </head>
 <body>
 	<div>
-		  <div class="text-right"> 
-		  <a class="navbar-brand logo-img" href="/MyWebProject/Index.jsp">Logo</a> 
+		  <div class="text-right"> 	   
 			 <div class="dropdown welcome-dd">
 			<a href="#"	class="nav-link dropdown-toggle text-right" data-toggle="dropdown">${name}</a> 
 			<ul class="dropdown-menu dropdown-menu-right">

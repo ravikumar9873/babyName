@@ -20,7 +20,7 @@
 
 	<div>
 		  
-		  <a class="navbar-brand logo-img" href="/MyWebProject/Index.jsp">Logo</a> 
+		  <a class="navbar-brand logo-img" href="/MyWebProject/Index.jsp"><img src="<%=request.getContextPath() %>/images/Logo.png"></a>
 		  </div>
 	
 	<div class="m-auto text-center mt-5" style="width: 325px">
@@ -52,7 +52,7 @@
 			<div id="messageDiv" style="display:none;"></div>
 		</form>
 	</div>
-	
+
 	<script>
 	
 	$("#loginSubmit").on('click', function(event){		

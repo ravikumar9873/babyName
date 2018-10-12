@@ -16,6 +16,7 @@
 			response.sendRedirect("/MyWebProject/UserInformation/RegisterUser.jsp");
 		}
 	%>
+	<div class="container">
 	<h1 itemprop="headline">Baby products: Must-haves for the first
 		year</h1>
 	<div class="spacer" itemprop="image" itemscope
@@ -203,5 +204,6 @@
 		</p>
 	</div>
 	</div>
+
 </body>
 </html>

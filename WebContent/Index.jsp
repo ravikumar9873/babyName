@@ -32,59 +32,86 @@
   </div>
   
 </div>  
-     
+   <br> 
 
  <h2>Baby Names by Alphabets</h2>
-  <ul class="pagination pagination">
-    <li class="page-item"><a class="page-link" href="#">A</a></li>
-    <li class="page-item"><a class="page-link" href="#">B</a></li>
-    <li class="page-item"><a class="page-link" href="#">C</a></li>
-    <li class="page-item"><a class="page-link" href="#">D</a></li>
-    <li class="page-item"><a class="page-link" href="#">E</a></li>
-    <li class="page-item"><a class="page-link" href="#">F</a></li>
-    <li class="page-item"><a class="page-link" href="#">G</a></li>
-    <li class="page-item"><a class="page-link" href="#">H</a></li>
-    <li class="page-item"><a class="page-link" href="#">I</a></li>
-    <li class="page-item"><a class="page-link" href="#">J</a></li>
-    <li class="page-item"><a class="page-link" href="#">K</a></li>
-    <li class="page-item"><a class="page-link" href="#">L</a></li>
-    <li class="page-item"><a class="page-link" href="#">M</a></li>
-    <li class="page-item"><a class="page-link" href="#">N</a></li>
-    <li class="page-item"><a class="page-link" href="#">O</a></li>
-    <li class="page-item"><a class="page-link" href="#">Q</a></li>
-    <li class="page-item"><a class="page-link" href="#">R</a></li>
-    <li class="page-item"><a class="page-link" href="#">S</a></li>
-    <li class="page-item"><a class="page-link" href="#">T</a></li>
-    <li class="page-item"><a class="page-link" href="#">U</a></li>
-    <li class="page-item"><a class="page-link" href="#">V</a></li>
-    <li class="page-item"><a class="page-link" href="#">W</a></li>
-    <li class="page-item"><a class="page-link" href="#">X</a></li>
-    <li class="page-item"><a class="page-link" href="#">Y</a></li>
-    <li class="page-item"><a class="page-link" href="#">Z</a></li>
-  </ul>
+ <div class="card-body">
+								<a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/A.jsp"
+									class="btn btn-outline-primary mb-1">A</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/B.jsp"
+									class="btn btn-outline-primary mb-1">B</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/C.jsp"
+									class="btn btn-outline-primary mb-1">C</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/D.jsp"
+									class="btn btn-outline-primary mb-1">D</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/E.jsp"
+									class="btn btn-outline-primary mb-1">E</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/F.jsp"
+									class="btn btn-outline-primary mb-1">F</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/G.jsp"
+									class="btn btn-outline-primary mb-1">G</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/H.jsp"
+									class="btn btn-outline-primary mb-1">H</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/I.jsp"
+									class="btn btn-outline-primary mb-1">I</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/J.jsp"
+									class="btn btn-outline-primary mb-1">J</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/K.jsp"
+									class="btn btn-outline-primary mb-1">K</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/L.jsp"
+									class="btn btn-outline-primary mb-1">L</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/M.jsp"
+									class="btn btn-outline-primary mb-1">M</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/N.jsp"
+									class="btn btn-outline-primary mb-1">N</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/O.jsp"
+									class="btn btn-outline-primary mb-1">O</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/P.jsp"
+									class="btn btn-outline-primary mb-1">P</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/Q.jsp"
+									class="btn btn-outline-primary mb-1">Q</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/R.jsp"
+									class="btn btn-outline-primary mb-1">R</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/S.jsp"
+									class="btn btn-outline-primary mb-1">S</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/T.jsp"
+									class="btn btn-outline-primary mb-1">T</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/U.jsp"
+									class="btn btn-outline-primary mb-1">U</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/V.jsp"
+									class="btn btn-outline-primary mb-1">V</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/W.jsp"
+									class="btn btn-outline-primary mb-1">W</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/X.jsp"
+									class="btn btn-outline-primary mb-1">X</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/Y.jsp"
+									class="btn btn-outline-primary mb-1">Y</a> <a
+									href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/browse/boy/letters/Z.jsp"
+									class="btn btn-outline-primary mb-1">Z</a>
+							</div>
 
      <h2>Baby Names by Category</h2> 
       
   <div class="box">
-  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hindu.jsp">
+  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/hindu.jsp">
   <img src="<%=request.getContextPath() %>/images/hindu.jpg"/>
   </a>
   <h3>Hindu Names</h3>
   </div>
   <div class="box">
-  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/muslim.jsp">
+  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/muslimName/muslim.jsp">
   <img src="<%=request.getContextPath() %>/images/muslim.jpg"/>
   </a>
   <h3>Muslim Names</h3>
   </div>
   <div class="box">
-  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/christian.jsp">
+  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/christian/christian.jsp">
   <img src="<%=request.getContextPath() %>/images/christian.jpg"/>
   </a>
   <h3>Christian Names</h3>
   </div>
   <div class="box">
-  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/sikh.jsp">
+  <a href="<%=request.getContextPath() %>/ViewBabyNameByReligion/sikhName/sikh.jsp">
   <img src="<%=request.getContextPath() %>/images/sikh.jpg"/>
   </a>
   <h3>Sikh Names</h3>

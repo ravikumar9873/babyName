@@ -14,13 +14,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 <script src="<%=request.getContextPath() %>/js/cancelForm.js"></script>
 <script	src="<%=request.getContextPath() %>/js/validateForm.js"></script>
+ <a class="navbar-brand logo-img" href="/MyWebProject/Index.jsp"><img src="<%=request.getContextPath() %>/images/Logo.png"></a>
 </head>
- 
+
 <body class="mt-10">
-<div>
-		 
-		  <a class="navbar-brand logo-img" href="/MyWebProject/Index.jsp">Logo</a> 
-		  </div>
 	<div  class="m-auto text-center mt-5" style="margin: 10px 0 0 10px; width: 400px">
 		<form action="Registration" method="post" id="myForm" class="mt-5 border px-4 py-5" style="padding: 10px;" > <!-- onsubmit="return validateForm() "-->
 			<h3>Member Signup</h3>

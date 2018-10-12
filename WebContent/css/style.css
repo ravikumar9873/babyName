@@ -125,4 +125,15 @@ div{
 label {
     margin: 20px;
 }
-
+.Section-footer{
+	padding-top: 18px;
+	margin: 45px;
+}
+.mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: none;
+    direction: ltr;
+}

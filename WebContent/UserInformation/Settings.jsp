@@ -18,6 +18,15 @@
 <meta charset="ISO-8859-1">
 <title>Settings Page</title>
 </head>
+<%
+		response.setHeader("cache-control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Pragma", "no-cache");
+		response.setDateHeader("Expires", 0);
+		if (session.getAttribute("username") == null) {
+			response.sendRedirect("/MyWebProject/UserInformation/Login.jsp");
+		}
+	%>
+
 <body  onload="getUserDetails()">
 <form action="Settings" name="cmyForm" id="cmyForm" method="post">
 	<div class="myNewSettingL mt-5 border px-5 py-5"> 
@@ -77,13 +86,12 @@
 		</div>
 
 		
-		<div class="modal fade" id="myModal" role="dialog">
-		
+		<div class="modal fade" id="myModal" role="dialog">	
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header" style="width: 100%;">					
 						<h4 class="modal-title">Change Password</h4>	
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<button type="button" class="close"  onclick="cancelForm()" data-dismiss="modal">&times;</button>
 					</div>
 					<div class="SetnewDivrow">
 						<label> Current Password </label> 
@@ -103,7 +111,7 @@
 					</div>
 					<div class="SetnewDivrow">
 						<button type="submit" name="submit"	id="changePwdSaveBtn" class="btn btn-primary mt-3 " onclick="updatePassword()">Save</button>
-						<button type="cancel" name="cancel"	id="changePwdCancelBtn" class="btn btn-primary mt-3" data-dismiss="modal">Cancel </button>						
+						<button type="cancel" name="cancel"	id="changePwdCancelBtn" class="btn btn-primary mt-3" data-dismiss="modal" onclick="cancelForm()">Cancel </button>						
 					 <div id="pwdMessageDiv" style="display:none;">
 					 <div class="alert alert-success" role="alert">
 		  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>

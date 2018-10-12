@@ -390,3 +390,108 @@ function showCMessage(results){
     }, 4000);
 }
 }
+
+function forgotPasswordPageValidation() {
+
+	if ($("#emailAddress").val() == "") {
+		$('#emailAddressErrorMsg').css("display","block");
+		$('#emailAddressErrorMsg').html("<font color='red' style='font-family:arial;font-size:80%;'>Email is required</font>");
+		$("#emailAddress").focus;
+		event.preventDefault();
+		return false;
+	} else {
+		document.getElementById('emailAddressErrorMsg').classList.add('d-none');
+	}
+	if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($("#emailAddress").val().toLowerCase()))) {
+		$('#emailAddressErrorMsg').css("display","block");
+		document.getElementById('emailAddressErrorMsg').classList.remove('d-none');
+		$('#emailAddressErrorMsg').html("<font color='red' style='font-family:arial;font-size:80%;'>You have entered an invalid email address!</font>");
+		event.preventDefault();
+		$("#emailAddress").focus;
+		return false;
+	} else {
+		document.getElementById('emailAddressErrorMsg').classList.add('d-none');
+	}
+	$("#forgotPwdSubmit").prop('disabled', true);
+	event.preventDefault();
+	var emailAddress = $("#emailAddress").val();
+	 var url="http://localhost:8080/MyWebProject/UserInformation/ForgotPassword"
+		 $.ajax({
+			 url:url,
+			 type:'POST',
+			 data:{
+				 emailAddress:emailAddress
+			 },
+			 success:function(result){		
+				 $("#forgotPwdSubmit").prop('disabled', false);
+				 if(result != null && result != ""){
+			        	$('#emailAddressErrorMsg').css("display","block");
+			            showCMessage(result);                 
+			            return true;
+			            
+			        }else{
+			            alert("Some exception occurred! Please try again.");			            
+			        }
+			    },
+			     error: function(jqxhr){
+			    	return false;
+			    }				 			 
+		 })
+		 function showCMessage(result){
+		    if(result == 'SUCCESS'){ 
+		    	
+	        	var successUrl = "/MyWebProject/UserInformation/reset_email_sent.jsp"; 
+	            window.location.href = successUrl;
+	            /*$('#emailAddressErrorMsg').css("display","block");
+				document.getElementById('emailAddressErrorMsg').classList.remove('d-none');
+				$('#emailAddressErrorMsg').html("<font color='green' style='font-family:arial;font-size:80%;'>Password is sent to your registered email address.</font>");				     	   
+		   */
+
+		    }else if(result == 'FAILURE'){
+		    	$('#emailAddressErrorMsg').css("display","block");
+				document.getElementById('emailAddressErrorMsg').classList.remove('d-none');
+				$('#emailAddressErrorMsg').html("<font color='red' style='font-family:arial;font-size:80%;'>Oops, this email is not registered with us. Please try with another email.</font>");				     	   
+		    }
+		    
+		    window.setTimeout(function() {
+		        $(".alert").fadeTo(5000, 0).slideUp(5000, function(){
+		            $(this).remove(); 
+		        });
+		    }, 4000);
+		}
+}
+
+function resetPasswordPageValidation() {
+
+	if ($("#resetPassword").val() == "") {
+		document.getElementById('resetPasswordErrorMsg').classList.remove('d-none');
+		$('#resetPasswordErrorMsg').css("display","block");
+		$('#resetPasswordErrorMsg').html("<font color='red' style='font-family:arial;font-size:80%;'>Password is required</font>");
+		$("#resetPassword").focus;
+		event.preventDefault();
+		return false;
+	} else {
+		document.getElementById('resetPasswordErrorMsg').classList.add('d-none');
+	}
+	if ($("#resetCPassword").val() == "") {
+		document.getElementById('resetCPasswordErrorMsg').classList.remove('d-none');
+		$('#resetCPasswordErrorMsg').css("display","block");
+		$('#resetCPasswordErrorMsg').html("<font color='red' style='font-family:arial;font-size:80%;'>Confirm Password is required</font>");
+		$("#resetPassword").focus;
+		event.preventDefault();
+		return false;
+	} else {
+		document.getElementById('resetCPasswordErrorMsg').classList.add('d-none');
+	}
+	if ($("#resetPassword").val() != $("#resetCPassword").val()) {
+		document.getElementById('resetCPasswordErrorMsg').classList.remove('d-none');
+		$('#resetCPasswordErrorMsg').css("display","block");
+		$('#resetCPasswordErrorMsg').html("<font color='red' style='font-family:arial;font-size:80%;'>Confirm Password doesn't match</font>");
+		$("#resetPassword").focus;
+		event.preventDefault();
+		return false;
+	} else {
+		document.getElementById('resetCPasswordErrorMsg').classList.add('d-none');
+	}
+	
+}

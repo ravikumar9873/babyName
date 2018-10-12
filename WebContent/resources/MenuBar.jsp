@@ -34,7 +34,7 @@
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		response.setHeader("Pragma", "no-cache");
 		response.setDateHeader("Expires", 0);
-		if (session.getAttribute("name") == null) {
+		if (session.getAttribute("username") == null) {
 	%>
 	<jsp:include page="/resources/UnAuthHeader.jsp"></jsp:include>
 	<%
@@ -59,13 +59,14 @@
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
 				data-toggle="dropdown">Baby Name</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">Hinduism Baby Name</a> <a
-						class="dropdown-item" href="#">Islam Baby Name</a> <a
-						class="dropdown-item" href="#">Christianity Baby Name</a> <a
-						class="dropdown-item" href="#">Sikhism Baby Name</a> <a
+					<a class="dropdown-item" href="<%=request.getContextPath() %>/ViewBabyNameByReligion/hinduName/hindu.jsp">Hindu Baby Name</a> <a
+						class="dropdown-item" href="<%=request.getContextPath() %>/ViewBabyNameByReligion/muslimName/muslim.jsp">Muslim Baby Name</a> <a
+						class="dropdown-item" href="<%=request.getContextPath() %>/ViewBabyNameByReligion/christian/christian.jsp">Christianity Baby Name</a> <a
+						class="dropdown-item" href="<%=request.getContextPath() %>/ViewBabyNameByReligion/sikhName/sikh.jsp">Sikhism Baby Name</a>
+						 <!-- <a
 						class="dropdown-item" href="#">Buddhism Baby Name</a> <a
 						class="dropdown-item" href="#">Jainism Baby Name</a> <a
-						class="dropdown-item" href="#">Zoroastrianism Baby Name</a>
+						class="dropdown-item" href="#">Zoroastrianism Baby Name</a> -->
 				</div></li>
 			<li class="nav-item"><a class="nav-link"
 				href="/MyWebProject/resources/Tips.jsp">Tips</a></li>
